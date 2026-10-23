@@ -65,3 +65,19 @@ Este proyecto me permitió practicar la creación de tablas, la carga de datos y
 También pude relacionar los resultados con un problema de negocio y representarlos en un gráfico para que sean más fáciles de interpretar.
 
 Aunque todavía tengo algunas mejoras pendientes, pude realizar una primera comparación entre las demoras en las entregas y las calificaciones de los clientes.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+**ACTUALIZACION 23/10/2026
+## Resultados del análisis
+
+Al comparar las entregas tardías con las entregadas a tiempo, obtuve estos resultados:
+
+- **Entregas a tiempo:** 11,00 % de reseñas negativas.
+- **Entregas tardías:** 54,79 % de reseñas negativas.
+
+También encontré que, de las 141 reseñas negativas, 40 corresponden a pedidos entregados tarde, un 28,37 %.
+
+Al revisar los datos encontré 5 pedidos que tenían dos reseñas cada uno. Para corregirlo, decidí conservar la reseña más reciente de cada pedido.
+
+Después volví a calcular los porcentajes y los compare con los resultados originales. 
+Los valores cambiaron poco, por lo que la conclusión del análisis se mantiene: las entregas tardías tienen una mayor proporción de reseñas negativas.
