@@ -53,8 +53,6 @@ Para este trabajo utilicé una muestra reducida de 1000 pedidos.
 ## Próximos pasos
 
 Me gustaría continuar el proyecto realizando algunas mejoras:
-
-- Corregir los pedidos que tienen más de una reseña.
 - Calcular los días de demora de cada pedido.
 - Analizar si las categorías de productos y los costos de envío también están relacionados con las reseñas negativas.
 - Más adelante, evaluar la posibilidad de crear un modelo predictivo.
