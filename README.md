@@ -65,17 +65,41 @@ También pude relacionar los resultados con un problema de negocio y representar
 Aunque todavía tengo algunas mejoras pendientes, pude realizar una primera comparación entre las demoras en las entregas y las calificaciones de los clientes.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-**ACTUALIZACION 23/10/2026
-## Resultados del análisis
 
-Al comparar las entregas tardías con las entregadas a tiempo, obtuve estos resultados:
 
-- **Entregas a tiempo:** 11,00 % de reseñas negativas.
-- **Entregas tardías:** 54,79 % de reseñas negativas.
+Actualización — 23/10/2026
 
-También encontré que, de las 141 reseñas negativas, 40 corresponden a pedidos entregados tarde, un 28,37 %.
+Corrección de resenas duplicadas
+Después de recibir la devolución, retomé el análisis para corregir las resenas duplicadas.
+Encontré 5 pedidos que tenían dos resenas cada uno. Para evitar contar dos veces el mismo pedido, decidí conservar la resena más reciente según la fecha.
+Para hacerlo utilicé consultas SQL con GROUP BY, MAX(), WITH y JOIN, sin eliminar registros de la base de datos.
+De esta manera, pasé de 996 reseñas a 991 reseñas, una por pedido.
+Las consultas utilizadas quedaron guardadas en el archivo correccion_resenas.sql.
 
-Al revisar los datos encontré 5 pedidos que tenían dos reseñas cada uno. Para corregirlo, decidí conservar la reseña más reciente de cada pedido.
+--Comparación de resultados
+Después de realizar la corrección, volví a calcular los porcentajes y los comparé con los resultados originales.
 
-Después volví a calcular los porcentajes y los compare con los resultados originales. 
-Los valores cambiaron poco, por lo que la conclusión del análisis se mantiene: las entregas tardías tienen una mayor proporción de reseñas negativas.
+Resultado                                   Antes   Después
+
+Total de reseñas negativas                    143    141
+
+Resenias neg. de entregas tardías              40     40
+
+% reseñas neg.entregas a tiempo             11,16%  11,00%
+
+% reseñas neg. entregas tardías             54,79%  54,79%
+
+% de todas las reseñas neg. que 
+corresponde a entregas tardías              27,97%  28,37%
+
+--Interpretación de los resultados
+Los resultados muestran dos datos diferentes:
+54,79 %: de las resenas correspondientes a entregas tardías, ese porcentaje fue negativo.
+28,37 %: del total de resenas negativas, ese porcentaje correspondió a entregas tardías.
+Después de corregir los duplicados, los porcentajes cambiaron muy poco.
+
+**Conclusión actualizada
+La corrección de las resenas duplicadas me permitió mejorar la calidad de los datos y comprobar que los resultados originales eran consistentes.
+La conclusión principal se mantiene: las entregas tardías tienen una mayor proporción de resenas negativas que las entregas a tiempo.
+A partir de estos resultados, recomendaría que la empresa preste más atención a los pedidos con riesgo de demora y mejore la comunicación con los clientes para evitar posibles reclamos.
+Este análisis muestra una relación entre las demoras y las reseñas negativas, aunque no permite afirmar que las demoras sean la única causa de las malas calificaciones.
