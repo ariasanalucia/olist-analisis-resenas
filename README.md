@@ -66,7 +66,7 @@ Aunque todavía tengo algunas mejoras pendientes, pude realizar una primera comp
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-##Actualización — 23/10/2026
+## Actualización — 23/10/2026
 
 Corrección de resenas duplicadas
 Después de recibir la devolución, retomé el análisis para corregir las resenas duplicadas.
