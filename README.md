@@ -1,5 +1,4 @@
 # olist-analisis-resenas
-analisis de la relacion entre las demoras en las entregas y las resenas negativas de clientes de Olist.
 ---------------------------------------------------------
 # Análisis de reseñas negativas y demoras en las entregas — Olist
 
@@ -67,7 +66,7 @@ Aunque todavía tengo algunas mejoras pendientes, pude realizar una primera comp
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Actualización — 23/10/2026
+##Actualización — 23/10/2026
 
 Corrección de resenas duplicadas
 Después de recibir la devolución, retomé el análisis para corregir las resenas duplicadas.
